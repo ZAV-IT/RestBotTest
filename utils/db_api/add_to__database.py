@@ -1,3 +1,4 @@
+from data.config import DATABASE
 from utils.db_api.db_commands import add_item, add_mainmenu, add_choiseln
 
 import asyncio

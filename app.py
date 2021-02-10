@@ -1,4 +1,7 @@
 from utils.db_api.add_to__database import start_bd
+from utils.db_api.database import create_datab
+
+create_datab()
 
 start_bd()
 

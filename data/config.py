@@ -11,6 +11,7 @@ BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
 PGUSER = str(os.getenv("PGUSER"))
 PGPASSWORD = str(os.getenv("PGPASSWORD"))
 DATABASE = str(os.getenv("DATABASE"))
+PGPORT = str(os.getenv("PGPORT"))
 
 admins = [
     os.getenv("ADMIN_ID"),
@@ -19,6 +20,7 @@ admins = [
 ip = os.getenv("ip")
 
 # Ссылка подключения к базе данных
+POSTGRES_URI_DEFAULT = f"postgresql://{PGUSER}:{PGPASSWORD}@{ip}/postgres"
 POSTGRES_URI = f"postgresql://{PGUSER}:{PGPASSWORD}@{ip}/{DATABASE}"
 aiogram_redis = {
     'host': ip,
