@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python3.7
 
 RUN mkdir /src
 WORKDIR /src
