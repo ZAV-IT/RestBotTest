@@ -11,8 +11,9 @@ services:
     env_file:
       - ".env"
 #    environment:
-#      POSTGRES_PASSWORD: example
-#    network_mode: "host"
+     POSTGRES_USER: postgres
+     POSTGRES_PASSWORD: example
+   network_mode: "host"
 
   adminer:
     container_name: adminer
@@ -26,7 +27,7 @@ services:
     container_name: bot
     build:
       context: .
-    command: python app.py
+    command: python3.7 app.py
     restart: always
     env_file:
         - ".env"
